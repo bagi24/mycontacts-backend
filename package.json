@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/bagi24/mycontacts-backend#readme",
   "dependencies": {
+    "bcryptjs": "^3.0.2",
     "dotenv": "^16.4.7",
     "express": "^5.1.0",
     "express-async-handler": "^1.2.0",
