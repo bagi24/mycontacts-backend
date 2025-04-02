@@ -1,6 +1,7 @@
 const express = require('express');
 const errorHandler = require('./middleware/errorhandler');
 const connectDb = require('./config/dbConnection');
+const { route } = require('./routes/contactRoutes');
 const dotenv = require('dotenv').config();
 
 // Connect to MongoDB using Mongoose
@@ -14,6 +15,7 @@ const port = process.env.PORT || 5000;
 app.use(express.json());
 
 app.use('/api/contacts', require('./routes/contactRoutes'));
+app.use('/api/users', require('./routes/userRoutes'));
 
 // Error handling middleware
 app.use(errorHandler);
